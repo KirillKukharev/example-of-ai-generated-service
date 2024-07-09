@@ -4,6 +4,8 @@ import { AdminUserModule } from "./adminUser/adminUser.module";
 import { BotActivityModule } from "./botActivity/botActivity.module";
 import { BotCommandModule } from "./botCommand/botCommand.module";
 import { TaskModule } from "./task/task.module";
+import { ReportModule } from "./report/report.module";
+import { AnalyticsDataModule } from "./analyticsData/analyticsData.module";
 import { TaskModule } from "./Task/task.module";
 import { HealthModule } from "./health/health.module";
 import { PrismaModule } from "./prisma/prisma.module";
@@ -22,6 +24,8 @@ import { ApolloDriver, ApolloDriverConfig } from "@nestjs/apollo";
     BotActivityModule,
     BotCommandModule,
     TaskModule,
+    ReportModule,
+    AnalyticsDataModule,
     TaskModule,
     HealthModule,
     PrismaModule,

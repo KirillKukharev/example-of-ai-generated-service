@@ -54,6 +54,27 @@ model Task {
   dueDate     DateTime?
 }
 
+model Report {
+  id                 String          @id @default(cuid())
+  createdAt          DateTime        @default(now())
+  updatedAt          DateTime        @updatedAt
+  description        String?
+  createdDate        DateTime?
+  title              String?
+  analyticsDataItems AnalyticsData[]
+}
+
+model AnalyticsData {
+  id          String    @id @default(cuid())
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  metricName  String?
+  metricValue Float?
+  recordedAt  DateTime?
+  report      Report?   @relation(fields: [reportId], references: [id])
+  reportId    String?
+}
+
 enum EnumAdminUserRole {
   Option1
 }
