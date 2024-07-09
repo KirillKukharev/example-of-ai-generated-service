@@ -1,0 +1,52 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DB_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Log {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model AdminUser {
+  id        String             @id @default(cuid())
+  createdAt DateTime           @default(now())
+  updatedAt DateTime           @updatedAt
+  active    Boolean?
+  username  String?
+  email     String?
+  password  String?
+  role      EnumAdminUserRole?
+}
+
+model BotActivity {
+  id           String                       @id @default(cuid())
+  createdAt    DateTime                     @default(now())
+  updatedAt    DateTime                     @updatedAt
+  timestamp    DateTime?
+  activityType EnumBotActivityActivityType?
+  details      String?
+  userId       Int?
+}
+
+model BotCommand {
+  id          String   @id @default(cuid())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  description String?
+  createdBy   String?
+  commandName String?
+}
+
+enum EnumAdminUserRole {
+  Option1
+}
+
+enum EnumBotActivityActivityType {
+  Option1
+}
