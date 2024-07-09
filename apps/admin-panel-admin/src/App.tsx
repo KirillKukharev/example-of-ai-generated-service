@@ -25,6 +25,14 @@ import { TaskList } from "./task/TaskList";
 import { TaskCreate } from "./task/TaskCreate";
 import { TaskEdit } from "./task/TaskEdit";
 import { TaskShow } from "./task/TaskShow";
+import { ReportList } from "./report/ReportList";
+import { ReportCreate } from "./report/ReportCreate";
+import { ReportEdit } from "./report/ReportEdit";
+import { ReportShow } from "./report/ReportShow";
+import { AnalyticsDataList } from "./analyticsData/AnalyticsDataList";
+import { AnalyticsDataCreate } from "./analyticsData/AnalyticsDataCreate";
+import { AnalyticsDataEdit } from "./analyticsData/AnalyticsDataEdit";
+import { AnalyticsDataShow } from "./analyticsData/AnalyticsDataShow";
 import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
@@ -85,6 +93,20 @@ const App = (): React.ReactElement => {
           edit={TaskEdit}
           create={TaskCreate}
           show={TaskShow}
+        />
+        <Resource
+          name="Report"
+          list={ReportList}
+          edit={ReportEdit}
+          create={ReportCreate}
+          show={ReportShow}
+        />
+        <Resource
+          name="AnalyticsData"
+          list={AnalyticsDataList}
+          edit={AnalyticsDataEdit}
+          create={AnalyticsDataCreate}
+          show={AnalyticsDataShow}
         />
       </Admin>
     </div>
