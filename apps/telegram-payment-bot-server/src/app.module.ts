@@ -2,6 +2,7 @@ import { Module } from "@nestjs/common";
 import { PaymentModule } from "./payment/payment.module";
 import { TransactionModule } from "./transaction/transaction.module";
 import { UserModule } from "./user/user.module";
+import { UserOperationsModule } from "./UserOperations/useroperations.module";
 import { HealthModule } from "./health/health.module";
 import { PrismaModule } from "./prisma/prisma.module";
 import { SecretsManagerModule } from "./providers/secrets/secretsManager.module";
@@ -17,6 +18,7 @@ import { ApolloDriver, ApolloDriverConfig } from "@nestjs/apollo";
     PaymentModule,
     TransactionModule,
     UserModule,
+    UserOperationsModule,
     HealthModule,
     PrismaModule,
     SecretsManagerModule,
