@@ -21,6 +21,10 @@ import { BotCommandList } from "./botCommand/BotCommandList";
 import { BotCommandCreate } from "./botCommand/BotCommandCreate";
 import { BotCommandEdit } from "./botCommand/BotCommandEdit";
 import { BotCommandShow } from "./botCommand/BotCommandShow";
+import { TaskList } from "./task/TaskList";
+import { TaskCreate } from "./task/TaskCreate";
+import { TaskEdit } from "./task/TaskEdit";
+import { TaskShow } from "./task/TaskShow";
 import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
@@ -74,6 +78,13 @@ const App = (): React.ReactElement => {
           edit={BotCommandEdit}
           create={BotCommandCreate}
           show={BotCommandShow}
+        />
+        <Resource
+          name="Task"
+          list={TaskList}
+          edit={TaskEdit}
+          create={TaskCreate}
+          show={TaskShow}
         />
       </Admin>
     </div>

@@ -3,6 +3,8 @@ import { LogModule } from "./log/log.module";
 import { AdminUserModule } from "./adminUser/adminUser.module";
 import { BotActivityModule } from "./botActivity/botActivity.module";
 import { BotCommandModule } from "./botCommand/botCommand.module";
+import { TaskModule } from "./task/task.module";
+import { TaskModule } from "./Task/task.module";
 import { HealthModule } from "./health/health.module";
 import { PrismaModule } from "./prisma/prisma.module";
 import { SecretsManagerModule } from "./providers/secrets/secretsManager.module";
@@ -19,6 +21,8 @@ import { ApolloDriver, ApolloDriverConfig } from "@nestjs/apollo";
     AdminUserModule,
     BotActivityModule,
     BotCommandModule,
+    TaskModule,
+    TaskModule,
     HealthModule,
     PrismaModule,
     SecretsManagerModule,
