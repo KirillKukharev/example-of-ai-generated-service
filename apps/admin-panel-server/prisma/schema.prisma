@@ -43,10 +43,29 @@ model BotCommand {
   commandName String?
 }
 
+model Task {
+  id          String            @id @default(cuid())
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+  title       String?
+  description String?
+  priority    EnumTaskPriority?
+  status      EnumTaskStatus?
+  dueDate     DateTime?
+}
+
 enum EnumAdminUserRole {
   Option1
 }
 
 enum EnumBotActivityActivityType {
+  Option1
+}
+
+enum EnumTaskPriority {
+  Option1
+}
+
+enum EnumTaskStatus {
   Option1
 }
